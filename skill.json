@@ -1,0 +1,30 @@
+{
+  "name": "genpark-hume-ai-empathic-voice-prosody-expression-analyzer-skill",
+  "version": "1.0.0",
+  "description": "Hume AI & Meta Muse-inspired Empathic Voice Prosody & Expression Analyzer. Decodes acoustic fundamental frequency (F0), speech tempo, jitter, and semantic sentiment into high-dimensional emotional states to direct real-time expressive TTS modulation.",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.llinkedin.com/company/92955550",
+  "tools": [
+    {
+      "name": "analyze_expression_and_modulate",
+      "description": "Analyze acoustic speech prosody and semantic cues to output emotional state and TTS modulation parameters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "transcript": {
+            "type": "string",
+            "description": "Spoken text transcript."
+          },
+          "acoustic_features": {
+            "type": "object",
+            "description": "Acoustic signals: mean_f0_hz, f0_variance, speaking_rate_wpm, pause_ratio, jitter_local."
+          }
+        },
+        "required": [
+          "transcript",
+          "acoustic_features"
+        ]
+      }
+    }
+  ]
+}
